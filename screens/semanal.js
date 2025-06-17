@@ -101,24 +101,23 @@ export default function SemanalScreen({ testDate = null }) {
     [agendaMock, selectedIndex, currentDate]
   );
 
-  // Calcula se cada aula está ativa, passada ou futura e minutesUntil
+  // Calcula status e minutesUntil
   const hojeSectionData = useMemo(() => {
     const now = currentDate;
+    const todayIndex = now.getDay();
     const hojeItems = agendaMock
       .filter(item => item.dayIndex === selectedIndex)
       .map(item => {
         const start = parse(item.start, 'hh:mm a', now);
         const end   = parse(item.end,   'hh:mm a', now);
-        const duration = `${differenceInMinutes(end, start)} min`;
         const minutesUntil = start > now
           ? differenceInMinutes(start, now)
           : null;
 
         return {
           ...item,
-          isNow: now >= start && now <= end,
+          isNow: selectedIndex === todayIndex && now >= start && now <= end,
           isPast: now > end,
-          duration,
           minutesUntil,
           startDate: start,
         };
@@ -185,7 +184,7 @@ export default function SemanalScreen({ testDate = null }) {
               {nextLessonInfo.minutesUntil % 60}m
             </Text>
           ) : (
-          <Text style={styles.upcomingBadge}>Sem mais aulas hoje</Text>
+            <Text style={styles.upcomingBadge}>Sem mais aulas hoje</Text>
           )}
         </View>
         <TouchableOpacity onPress={nextWeek}>
@@ -269,9 +268,7 @@ export default function SemanalScreen({ testDate = null }) {
                   <Text style={styles.badgeLater}>
                     {Math.floor(item.minutesUntil / 60)}h {item.minutesUntil % 60}m
                   </Text>
-                ) : (
-                  <Text style={styles.badgeLater}></Text>
-                )}
+                ) : null}
               </View>
             </View>
           );
