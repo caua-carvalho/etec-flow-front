@@ -5,10 +5,10 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Ionicons } from '@expo/vector-icons';
 
-import SemanalScreen       from './screens/semanal';
-import EscolasScreen       from './screens/escolas';
-import GradeScreen         from './screens/grade';
-import ConfiguracoesScreen from './screens/configuracoes';
+import SemanalScreen       from './professor/screens/semanal';
+import EscolasScreen       from './professor/screens/escolas';
+import GradeScreen         from './professor/screens/grade';
+import ConfiguracoesScreen from './professor/screens/configuracoes';
 
 const Tab   = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -65,7 +65,7 @@ export default function MainTabs() {
           <SemanalScreen
             {...props}
             // Aqui você força a data para testes:
-            testDate={new Date('2025-06-17T16:00:00')}
+            testDate={new Date('2025-06-17T20:00:00')}
           />
         )}
       </Tab.Screen>
