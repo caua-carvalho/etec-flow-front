@@ -299,7 +299,7 @@ const styles = StyleSheet.create({
   container:       { flex: 1, backgroundColor: '#fff', padding: 20 },
   header:          { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 5 },
   headerTitle:     { fontSize: 18, fontWeight: '700' },
-  upcomingBadge:   { fontSize: 12, fontWeight: '600', color: '#666', marginTop: 4 },
+  upcomingBadge:   { fontSize: 12, fontWeight: '600', color: '#666', marginTop: 4, color: '#4CD964'},
   weekContainer:   { flexDirection: 'row', justifyContent: 'center', marginBottom: 5 },
   weekList:        { paddingVertical: 12, flex: 1, justifyContent: 'center', alignItems: 'center' },
   dayBox:          { width: 48, height: 80, marginHorizontal: 1, borderRadius: 8, backgroundColor: '#f5f5f7', justifyContent: 'center', alignItems: 'center' },
@@ -318,6 +318,6 @@ const styles = StyleSheet.create({
   lesson:          { fontSize: 16, fontWeight: '700' },
   right:           { alignItems: 'flex-end', flex: 1 },
   badgeNow:        { marginTop: 4, fontSize: 12, fontWeight: '600', color: '#4CD964' },
-  badgeLater:     { marginTop: 4, fontSize: 12, fontWeight: '600', color: '#666' },
+  badgeLater:      { marginTop: 4, fontSize: 12, fontWeight: '600', color: '#666' },
   cardPast:        { opacity: 0.5 },
 });
