@@ -24,17 +24,17 @@ export function useCurrentDate(overrideDate = null) {
 
 // Mock de agenda; substitua por chamada à API
 const agendaMock = [
-  { dayIndex: 2, start: '08:00 AM', end: '08:50 AM', title: 'Matemática', room: 'Sala 02', school: 'Prof. Ilza Nascimento Pintus' },
-  { dayIndex: 2, start: '08:50 AM', end: '09:40 AM', title: 'Banco de Dados', room: 'Sala 01', school: 'Prof. Ilza Nascimento Pintus' },
-  { dayIndex: 2, start: '09:40 AM', end: '10:30 AM', title: 'Banco de Dados', room: 'Sala 01', school: 'EE Prof. Alceu Maynard Araujo' },
-  { dayIndex: 2, start: '10:30 AM', end: '11:20 AM', title: 'Programação Web', room: 'Lab 01', school: 'EE Prof. Alceu Maynard Araujo' },
-  { dayIndex: 3, start: '10:30 AM', end: '11:20 AM', title: 'Programação Web', room: 'Lab 01', school: 'EE Prof. Alceu Maynard Araujo' },
-  { dayIndex: 2, start: '11:20 AM', end: '12:10 PM', title: 'Química', room: 'Sala 03', school: 'Prof. Marcelo Silva' },
-  { dayIndex: 2, start: '12:10 PM', end: '01:00 PM', title: 'Física', room: 'Sala 04', school: 'Prof. Ana Oliveira' },
-  { dayIndex: 2, start: '01:00 PM', end: '01:50 PM', title: 'Inglês', room: 'Lab de Informática', school: 'Prof. Carla Mendes' },
-  { dayIndex: 2, start: '01:50 PM', end: '02:40 PM', title: 'Educação Física', room: 'Quadra', school: 'Prof. Ricardo Santos' },
-  { dayIndex: 2, start: '02:40 PM', end: '03:30 PM', title: 'Geografia', room: 'Sala 05', school: 'Prof. Luciana Costa' },
-  { dayIndex: 2, start: '03:30 PM', end: '04:20 PM', title: 'História', room: 'Sala 06', school: 'Prof. Fernando Gomes' },
+  { dayIndex: 2, start: '08:00 AM', end: '08:50 AM', title: 'Matemática',      room: 'Sala 02',            school: 'Prof. Ilza Nascimento Pintus' },
+  { dayIndex: 2, start: '08:50 AM', end: '09:40 AM', title: 'Banco de Dados',  room: 'Sala 01',            school: 'Prof. Ilza Nascimento Pintus' },
+  { dayIndex: 2, start: '09:40 AM', end: '10:30 AM', title: 'Banco de Dados',  room: 'Sala 01',            school: 'EE Prof. Alceu Maynard Araujo' },
+  { dayIndex: 2, start: '10:30 AM', end: '11:20 AM', title: 'Programação Web', room: 'Lab 01',             school: 'EE Prof. Alceu Maynard Araujo' },
+  { dayIndex: 3, start: '10:30 AM', end: '11:20 AM', title: 'Programação Web', room: 'Lab 01',             school: 'EE Prof. Alceu Maynard Araujo' },
+  { dayIndex: 2, start: '11:20 AM', end: '12:10 PM', title: 'Química',         room: 'Sala 03',            school: 'Prof. Marcelo Silva' },
+  { dayIndex: 2, start: '12:10 PM', end: '01:00 PM', title: 'Física',          room: 'Sala 04',            school: 'Prof. Ana Oliveira' },
+  { dayIndex: 2, start: '01:00 PM', end: '01:50 PM', title: 'Inglês',          room: 'Lab de Informática', school: 'Prof. Carla Mendes' },
+  { dayIndex: 2, start: '01:50 PM', end: '02:40 PM', title: 'Educação Física', room: 'Quadra',             school: 'Prof. Ricardo Santos' },
+  { dayIndex: 2, start: '02:40 PM', end: '03:30 PM', title: 'Geografia',       room: 'Sala 05',            school: 'Prof. Luciana Costa' },
+  { dayIndex: 2, start: '03:30 PM', end: '04:20 PM', title: 'História',        room: 'Sala 06',            school: 'Prof. Fernando Gomes' },
 ];
 
 const WEEK_DAYS = ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'];

@@ -65,7 +65,7 @@ export default function MainTabs() {
           <SemanalScreen
             {...props}
             // Aqui você força a data para testes:
-            testDate={new Date('2025-06-17T20:00:00')}
+            testDate={new Date('2025-06-18T13:10:00')}
           />
         )}
       </Tab.Screen>
