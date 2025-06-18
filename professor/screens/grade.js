@@ -13,8 +13,9 @@ const agendaMock = [
   { dia: 0, hora: 0, turma: 'A', titulo: 'Prof. Ferrine', aula: 'BD', sala: 'Lab 5', cor: '#FDE68A' },
   { dia: 0, hora: 0, turma: 'B', titulo: 'Prof. Ferrine', aula: 'BD', sala: 'Lab 5', cor: '#FDE68A' },
   { dia: 1, hora: 0, turma: 'A', titulo: 'Prof. Rogerio', aula: 'PAM', sala: 'Lab 4', cor: '#A5B4FC' },
-  { dia: 1, hora: 0, turma: 'B', titulo: 'Prof. Silva', aula: 'Redes', sala: 'Lab 8', cor: '#6EE7B7' },
+  { dia: 1, hora: 0, turma: 'B                                                                                                                                                                                                                                                                                                                                                                                                       ', titulo: 'Prof. Silva', aula: 'Redes', sala: 'Lab 8', cor: '#6EE7B7' },
   { dia: 1, hora: 1, turma: 'A', titulo: 'Prof. Costa', aula: 'SO', sala: 'Sala 2', cor: '#FDBA74' },
+  { dia: 1, hora: 1, turma: 'B', titulo: 'Prof. Costa', aula: 'PAM', sala: 'Sala 2', cor: '#A5B4FC' },
   { dia: 3, hora: 2, turma: 'B', titulo: 'Prof. Lima', aula: 'POO', sala: 'Lab 1', cor: '#FCA5A5' },
 ];
 
@@ -64,7 +65,7 @@ export default function GradeScreen() {
           {horarios.map((h, rowIdx) => (
             <View key={h} style={styles.row}>
               {/* Coluna horário */}
-              <View style={[styles.timeHeader, { width: 60, height: CELL_HEIGHT }]}>                
+              <View style={[styles.timeHeader, { width: 60, height: 120 }]}>                
                 <Text style={styles.timeText}>{h}</Text>
               </View>
 
@@ -74,7 +75,7 @@ export default function GradeScreen() {
                 return (
                   <View
                     key={`${rowIdx}-${colIdx}`}
-                    style={[styles.cell, { width: CELL_WIDTH, height: CELL_HEIGHT }]}
+                    style={[styles.cell, { width: CELL_WIDTH, height: 120 }]}
                   >
                     {grupos.map(g => (
                       <View
