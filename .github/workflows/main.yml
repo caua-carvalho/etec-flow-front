@@ -1,0 +1,34 @@
+name: Deploy Back-end via FTP
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Preparar artefatos
+        run: echo "Placeholder para build/testes"
+
+      - name: Clean & Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server:    ${{ secrets.FTP_HOST }}
+          username:  ${{ secrets.FTP_USERNAME }}
+          password:  ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./                # raiz do projeto
+          server-dir: /htdocs/          # pasta de destino no servidor
+          dry-run:            false    # testar sem alterar? use true na primeira vez
+          dangerous-clean-slate: true   # <--- ativa limpeza completa
+          exclude: |
+            **/.github/**
+            **/.env
+            **/logs/**
+            **.sql
