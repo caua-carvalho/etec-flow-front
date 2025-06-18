@@ -4,9 +4,16 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Text, TouchableOpacity, StyleSheet, FlatList } from 'react-native';
 
 const ESCOLAS = [
-  'Prof. Ilza Nascimento Pintus',
-  'EE Prof. Alceu Maynard Araujo',
+  {
+    nome: 'Prof. Ilza Nascimento Pintus',
+    turmas: ['1º ano A', '2º ano B', '3º ano C'],
+  },
+  {
+    nome: 'EE Prof. Alceu Maynard Araujo',
+    turmas: ['1º ano A', '1º ano B', '2º ano A'],
+  },
 ];
+
 
 export default function EscolasScreen({ navigation }) {
   const [turno, setTurno] = useState('Manhã');
