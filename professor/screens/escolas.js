@@ -1,9 +1,8 @@
 // screens/EscolasScreen.js
 import React, { useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { View, Text, TouchableOpacity, StyleSheet, FlatList } from 'react-native';
+import { Text, TouchableOpacity, StyleSheet, FlatList } from 'react-native';
 
-const TURNOS = ['Manhã', 'Tarde', 'Noite'];
 const ESCOLAS = [
   'Prof. Ilza Nascimento Pintus',
   'EE Prof. Alceu Maynard Araujo',
@@ -15,19 +14,6 @@ export default function EscolasScreen({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Escolas</Text>
-      <View style={styles.tabContainer}>
-        {TURNOS.map(t => (
-          <TouchableOpacity
-            key={t}
-            style={[styles.tab, turno === t && styles.tabActive]}
-            onPress={() => setTurno(t)}
-          >
-            <Text style={[styles.tabText, turno === t && styles.tabTextActive]}>
-              {t}
-            </Text>
-          </TouchableOpacity>
-        ))}
-      </View>
 
       <FlatList
         data={ESCOLAS}
