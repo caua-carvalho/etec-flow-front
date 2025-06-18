@@ -6,7 +6,6 @@ import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context'
 const dias = ['Seg','Ter','Qua','Qui','Sex'];
 const horarios = ['07:30','08:20','09:10','10:00','10:20','11:10','12:00','13:00','13:50','14:40','15:30'];
 const CELL_WIDTH = 100;
-const CELL_HEIGHT = 80;
 
 // Mock de resposta da API
 const agendaMock = [
